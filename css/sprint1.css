@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(243, 221, 221);
+    width: auto;
+}
+
+h1 {
+    /* background-color:rgb(250, 252, 250); */
+}
+
+.restart {
+    display: none;
+}
+
+.cell {
+    background-color: lightblue;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+}
