@@ -35,17 +35,43 @@ function countNeighbors(mat, pos) {
 function getEmptyCells(board) {
   var emptyCells = [];
   for (var i = 0; i < board.length; i++) {
-      for (var j = 0; j < board[0].length; j++) {
-          var currCell = board[i][j];
-          if (currCell === EMPTY) {
-              var pos = { i: i, j: j }
-              emptyCells.push(pos);
-          }
+    for (var j = 0; j < board[0].length; j++) {
+      var currCell = board[i][j];
+      if (currCell === EMPTY) {
+        var pos = { i: i, j: j }
+        emptyCells.push(pos);
       }
+    }
   }
   return emptyCells;
 }
 
+function startClock() {
+  startTime = new Date();
+  var timer = document.querySelector(".timer");
+  gShowTimeInterval = setInterval(function () {
+    gTimeElasped = (new Date() - startTime);
+    var timeElaspedMilSeconds = parseInt(gTimeElasped % 1000) / 100;
+    timeDisplay = (parseInt(gTimeElasped / 1000)) + '.' + timeElaspedMilSeconds.toFixed();
+    timer.innerText = `🕑 ${timeDisplay} sec`
+  }, 2);
+}
+
+function stopClock() {
+  var resetBtn = document.querySelector(".restart");
+  resetBtn.classList.toggle("hidden");
+  clearInterval(gShowTimeInterval);
+  gShowTimeInterval = null;
+}
+
+function reset() {
+  stopClock();
+  var timer = document.querySelector(".timer");
+  timer.innerHTML = '';
+  renderBoard(gBoard);
+  startTime = null;
+  gTimeElasped = null;
+}
 
 
 // location such as: {i: 2, j: 7}

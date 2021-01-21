@@ -1,14 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+/* @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:700'; */
+
 body {
-    background-color: rgb(243, 221, 221);
-    width: auto;
+    /* background: teal url(https://assets.codepen.io/15664/bliss.jpg) center / cover no-repeat; */
+    /* display: flex; */
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    text-align: center;
 }
 
 h1 {
-    /* background-color:rgb(250, 252, 250); */
+    background-color: rgb(250, 252, 250);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .restart {
-    display: none;
+    /* display: none; */
+}
+
+.timer {
+    background-color: red;
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cell {
@@ -17,4 +39,10 @@ h1 {
     height: 40px;
     text-align: center;
     font-size: 1.5em;
+}
+
+.board-container {
+    /* margin-left: auto;
+    margin-right: auto;
+    margin: auto; */
 }
