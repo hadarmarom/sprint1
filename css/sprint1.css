@@ -7,30 +7,105 @@
 body {
     /* background: teal url(https://assets.codepen.io/15664/bliss.jpg) center / cover no-repeat; */
     /* display: flex; */
+    /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))  ; */
     background-color: antiquewhite;
-    font-family: sans-serif;
     text-align: center;
 }
 
 h1 {
-    background-color: rgb(250, 252, 250);
+    padding: 20px;
+    border-bottom: 10px dotted darkcyan;
+    color: darkcyan;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Potta One', cursive;
+}
+
+button {
+    font-family: monospace;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: antiquewhite;
 }
 
 button:hover {
+    color: white;
     cursor: pointer;
 }
 
+.beginner {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.beginner:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.medium {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.medium:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.expert {
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+}
+
+.expert:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.tooMuch {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.tooMuch:hover {
+    background-color: black;
+}
+
 .restart {
+    font-size: 25px;
+    padding: 32px 32px;
+    border-radius: 50%;
+}
+
+.restart:hover {
+    transform: rotate(180deg);
     /* display: none; */
 }
 
 .timer {
-    background-color: red;
+    /* background-color: red; */
 }
 
 .table {
     margin-left: auto;
     margin-right: auto;
+}
+
+.disable {
+    pointer-events: none;
+
 }
 
 .cell {
@@ -41,8 +116,27 @@ button:hover {
     font-size: 1.5em;
 }
 
-.board-container {
-    /* margin-left: auto;
-    margin-right: auto;
-    margin: auto; */
+.covered:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.media-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0px;
+}
+
+.content-media {
+    border-radius: 25px;
+    background-color: lightblue;
+    width: 300px;
+    height: 300px;
+    /* padding-top: 40px; */
+    padding-right: 4px;
+    /* padding-top: 40px; */
+    padding-left: 4px;
+    text-align: center;
+    float: right;
 }
